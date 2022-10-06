@@ -1,0 +1,27 @@
+
+Running PerfTest on "network" with random inputs (16 iterations)...
+................
+
+Results for "network", 16 inferences @400MHz/200MHz (complexity: 24120 MACC)
+ duration     : 0.533 ms (average)
+ CPU cycles   : 213392 (average)
+ CPU Workload : 0% (duty cycle = 1s)
+ cycles/MACC  : 8.84 (average for all layers)
+ used stack   : DISABLED
+ used heap    : DISABLED or NOT YET SUPPORTED
+ observer res : -1 bytes used from the heap (6 c-nodes)
+
+ Inference time by c-node
+  kernel  : 0.527ms (time passed in the c-kernel fcts)
+  user    : 0.001ms (time passed in the user cb)
+
+ c_id  type                id       time (ms)
+ ---------------------------------------------------
+ 0     CONV2D              0          0.202  38.44 %
+ 1     CONV2D              1          0.158  30.08 %
+ 2     DENSE               4          0.158  29.97 %
+ 3     NL                  4          0.001   0.35 %
+ 4     DENSE               5          0.004   0.77 %
+ 5     NL                  5          0.002   0.39 %
+ -------------------------------------------------
+                                      0.527 ms
